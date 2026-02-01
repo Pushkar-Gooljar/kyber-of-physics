@@ -1,3 +1,30 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// Remove Excalidraw folder from sidebar
+li:has(a.folder-title[href*="01_Excalidraw"]) {
+  display: none !important;
+}
+
+// Style images with captions
+
+.image-with-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.captioned-image {
+    background-color: white !important;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 90%;
+    margin: 0 !important;
+}
+
+.image-caption {
+    text-align: justify;
+    margin-top: 10px !important;
+    font-weight: 600;
+}
