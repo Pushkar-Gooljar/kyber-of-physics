@@ -74,7 +74,7 @@ const config: QuartzConfig = {
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
       ImageCaption(),
-      Plugin.Latex({ renderEngine: "mathjax" }),
+      Plugin.Latex({ renderEngine: "katex" }),
     ],
     filters: [
       Plugin.RemoveDrafts(),
@@ -85,7 +85,7 @@ const config: QuartzConfig = {
           const filePath = file.data.filePath as string | undefined
           
           // If the path exists and starts with your folder, return false (don't publish)
-          if (filePath && filePath.startsWith("01_Excalidraw/")) {
+          if (filePath && filePath.startsWith("01_excalidraw/")) {
             return false
           }
           
