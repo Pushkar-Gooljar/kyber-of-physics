@@ -18,7 +18,7 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "physics.pushthecar.com",
-    ignorePatterns: ["private", "templates", ".obsidian", "00_Templates"],
+    ignorePatterns: ["private", "templates", ".obsidian", "00_templates"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
@@ -78,20 +78,7 @@ const config: QuartzConfig = {
     ],
     filters: [
       Plugin.RemoveDrafts(),
- {
-        name: "ExcludeExcalidrawFiles",
-        shouldPublish(_ctx, [_tree, file]) {
-          // "file.data.filePath" contains the relative path (e.g. "01_Excalidraw/drawing.md")
-          const filePath = file.data.filePath as string | undefined
-          
-          // If the path exists and starts with your folder, return false (don't publish)
-          if (filePath && filePath.startsWith("01_excalidraw/")) {
-            return false
-          }
-          
-          return true
-        },
-      },
+ 
 
     
     ],

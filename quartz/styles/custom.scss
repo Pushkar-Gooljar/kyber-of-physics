@@ -1,7 +1,7 @@
 @use "./base.scss";
 
 // Remove Excalidraw folder from sidebar
-li:has(a.folder-title[href*="01_Excalidraw"]) {
+li:has(a.folder-title[href*="01_excalidraw"]) {
   display: none !important;
 }
 
