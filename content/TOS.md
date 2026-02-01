@@ -1,7 +1,4 @@
-Here are the high-quality notes for **Topic 18.5: Electric Potential**.
-
-This topic represents a shift from **Vector** mechanics (Force, Field Strength) to **Scalar** mechanics (Energy, Work). This is where the math becomes easier (simple addition), but the concepts become more abstract.
-
+hell
 ***
 
 # 18.5 Electric Potential
