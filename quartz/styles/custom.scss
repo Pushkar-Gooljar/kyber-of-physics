@@ -28,3 +28,19 @@ li:has(a.folder-title[href*="01_Excalidraw"]) {
     margin-top: 10px !important;
     font-weight: 600;
 }
+
+/* Force KaTeX equations to center inside Callouts/Blockquotes */
+.callout .katex-display, 
+blockquote .katex-display {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    width: 100%;
+}
+
+/* Optional: Ensure the internal table of 'aligned' equations is centered */
+.callout .katex-display > .katex, 
+blockquote .katex-display > .katex {
+    text-align: center !important;
+}
