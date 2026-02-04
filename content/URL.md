@@ -53,8 +53,12 @@
 >
 > *   **The Cambodian Catalyst (2022):** The US Department of Justice indicted Cambodian officials for laundering wild macaques. This caused a global shortage, shifting intense pressure and scrutiny onto **Mauritius** to fill the supply gap.
 > *   **The "Wild-Caught" Accusations:**
+>     *   US/EU labs generally require **F2 Generation** animals (grandchildren of wild monkeys) to ensure they are pathogen-free.
 >     *   **The Scandal:** Local whistleblowers and groups like *Action for Primates* allege that due to high demand, Mauritian trappers are capturing wild monkeys and filtering them directly into the export supply chain, bypassing the years-long breeding requirement.
 > *   **The "Surplus" Killing:** Investigations have revealed that when demand fluctuates or animals don't meet weight criteria, hundreds of "surplus" monkeys in Mauritian farms are killed (culled) rather than released, to save on feeding costs.
+> *   **Undercover Footage:** Videos released by animal rights groups have shown brutal trapping methods in Mauritian forests, separating infants from mothers and keeping them in barren concrete group cages, contradicting the "humane" image projected by the industry.
+
+
 
 ### The Local Conflict: "Pest vs. Sacred"
 *   **Ecological View:** Macaques are invasive pests destroying endemic flora (Pandanus). Export is framed as "biodiversity management."
