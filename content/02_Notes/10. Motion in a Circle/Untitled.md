@@ -1,2 +1,0 @@
-
-<iframe src="https://cassian.netlify.app/?url=https://vz-6b69b3fd-bc8.b-cdn.net/6b2aecb7-046e-45df-9598-6a19e063e2e5/playlist.m3u8" style="width: 100% !important; aspect-ratio: 16/9; border-radius: 10px;" frameborder="0" allow="fullscreen" allowfullscreen="true">></iframe>
