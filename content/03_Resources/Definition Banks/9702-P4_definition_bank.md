@@ -1,7 +1,7 @@
 # 12. Motion in a Circle
 
 
->[!success] Radian [1]
+>[!success] Radian 
 >> *9702_s25_qp_42-Q1.a*
 >
 >**Question**
