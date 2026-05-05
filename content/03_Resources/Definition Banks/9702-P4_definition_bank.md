@@ -1,7 +1,7 @@
 # 12. Motion in a Circle
 
 
->[!success] Radian 
+>[!success] Radian (1)
 >> *9702_s25_qp_42-Q1.a*
 >
 >**Question**
@@ -10,7 +10,7 @@
 >**Mark Scheme**
 >- Angle subtended at centre of circle when arc length is equal to radius of the circle
 
->[!success] Centripetal Acceleration [1]
+>[!success] Centripetal Acceleration (1)
 >> *9702_w21_qp_42-Q1.a*
 >
 >**Question**
@@ -21,7 +21,7 @@
 
 
 # 13. Gravitational Fields
->[!success] Field of Force [2]
+>[!success] Field of Force (2)
 >> *9702_w17_qp_42-Q9.a*
 >
 >**Question**
@@ -30,7 +30,7 @@
 >**Mark Scheme**
 >- Region of space where a particle experiences a force
 
->[!success] Gravitational Field [1]
+>[!success] Gravitational Field (1)
 >> *9702_w25_qp_41-Q3.a*
 >
 >**Question**
@@ -39,7 +39,7 @@
 >**Mark Scheme**
 >- Force per unit mass
 
->[!success] Gravitational Field Line [2]
+>[!success] Gravitational Field Line (2)
 >> *9702_s25_qp_42-Q2.a.i*
 >
 >**Question**
@@ -50,7 +50,7 @@
 >- acting on a test mass
 
 
->[!success] Gravitational Field Strength [1]
+>[!success] Gravitational Field Strength (1)
 >> *9702_w18_qp_42-Q1.a.i*
 >
 >**Question**
@@ -61,7 +61,7 @@
 
 
 
->[!success] Newton's Law of gravitation [2]
+>[!success] Newton's Law of gravitation (2)
 >> *9702_w25_qp_44-Q1.a*
 >
 >**Question**
@@ -72,7 +72,7 @@
 >- and inversely proportional to the square of their separation
 
 
->[!success] Features of geostationary orbit [3]
+>[!success] Features of geostationary orbit (3)
 >> *9702_m19_qp_42-Q4.a*
 >
 >**Question**
@@ -84,7 +84,7 @@
 >- Orbits west to east
 >- One particular orbital radius 
 
->[!success] Gravitational Potential at a point [2]
+>[!success] Gravitational Potential at a point (2)
 >> *9702_s25_qp_41-Q1.a*
 >
 >**Question**
@@ -95,7 +95,7 @@
 >- in moving a small test mass from infinity to a point
 
 # 14. Temperature 
->[!success] Thermal Equilibrium [2]
+>[!success] Thermal Equilibrium (2)
 >> *9702_s25_qp_44-Q2.a*
 >
 >**Question**
@@ -105,7 +105,7 @@
 >- Same temperature as each other
 >- no net transfer of thermal energy between them
 
->[!success] Absolute Zero [2]
+>[!success] Absolute Zero (2)
 >> *9702_w11_qp_43-Q2.b.ii*
 >
 >**Question**
@@ -116,7 +116,7 @@
 >- Equivalent to -273.15 degrees Celsius 
 
 
->[!success] Specific Heat Capacity [1]
+>[!success] Specific Heat Capacity (1)
 >> *9702_s25_qp_42-Q3.a*
 >
 >**Question**
@@ -128,7 +128,7 @@
 
 
 
->[!success] Specific latent heat [2]
+>[!success] Specific latent heat (2)
 >> *9702_s25_qp_41-Q3.a*
 >
 >**Question**
@@ -139,7 +139,7 @@
 >- at constant temperature
 
 
->[!success] Specific latent heat of fusion [2]
+>[!success] Specific latent heat of fusion (2)
 >> *9702_w08_qp_4-Q2.a*
 >
 >**Question**
@@ -150,7 +150,7 @@
 >- to change state from solid to liquid at constant temperature 
 
 
->[!success] Specific latent heat of vaporisation [2]
+>[!success] Specific latent heat of vaporisation (2)
 >> *9702_s22_qp_42-Q3.a*
 >
 >**Question**
@@ -163,7 +163,7 @@
 
 # 15. Ideal Gases
 
->[!success] Mole [2]
+>[!success] Mole (2)
 >> *FROM CHEMISTRY!*
 >
 >**Question**
@@ -173,7 +173,7 @@
 >- Amount of substance
 >- containing Avogadro's number of particles
 
->[!success] Avogadro's Constant [1]
+>[!success] Avogadro's Constant (1)
 >> *9702_w24_qp_41-Q3.a.i*
 >
 >**Question**
@@ -184,7 +184,7 @@
 
 # 16. Thermodynamics
 
->[!success] Internal energy of ideal gas [2]
+>[!success] Internal energy of ideal gas (2)
 >> *9702_w25_qp_44-Q3.a, 9702_m24_qp_42-Q2.a*
 >
 >**Question**
@@ -194,7 +194,7 @@
 >- Total kinetic energy associated with the random motion of molecules 
 >- plus total potential energy of molecules but potential energy is zero 
 
->[!success] Internal energy of a system [2]
+>[!success] Internal energy of a system (2)
 >> *9702_s25_qp_41-Q4.a.i*
 >
 >**Question**
@@ -205,7 +205,7 @@
 >- total energy of random motion of particles 
 
 
->[!success] First law of thermodynamics [2]
+>[!success] First law of thermodynamics (2)
 >> *9702_w25_qp_42-Q4.a*
 >
 >**Question**
@@ -216,7 +216,7 @@
 >- **increase** in internal energy = work done **on** system + energy transferred **to** the system by heating.
 
 # 17. Oscillations 
->[!success] Simple harmonic motion [2]
+>[!success] Simple harmonic motion (2)
 >> *9702_s25_qp_42-Q5.a*
 >
 >**Question**
@@ -226,7 +226,7 @@
 >- Motion in which acceleration is directly proportional to displacement
 >- and acceleration is always in opposite **direction** to displacement.
 
->[!success] Angular frequency [1]
+>[!success] Angular frequency (1)
 >> *9702_w17_qp_41-Q2.a*
 >
 >**Question**
@@ -235,7 +235,7 @@
 >**Mark Scheme**
 >- Angular frequency = $2\pi \times \text{frequency}$
 
->[!success] Damping [2]
+>[!success] Damping (2)
 >> *9702_w25_qp_42-Q5.b.i*
 >
 >**Question**
@@ -246,7 +246,7 @@
 >- due to **resistive** forces 
 
 
->[!success] Resonance [2]
+>[!success] Resonance (2)
 >> *9702_s22_qp_42-Q4.a*
 >
 >**Question**
@@ -258,7 +258,7 @@
 
 
 
->[!success] Natural frequency [2]
+>[!success] Natural frequency (2)
 >> 9702_m18_qp_42-Q4.a
 >
 >**Question**
@@ -270,7 +270,7 @@
 # 18. Electric fields
 
 
->[!success] Electric field [1]
+>[!success] Electric field (1)
 >> *9702_w25_qp_42-Q6.a*
 >
 >**Question**
@@ -281,7 +281,7 @@
 
 
 
->[!success] Electric field line [2]
+>[!success] Electric field line (2)
 >> *9702_m22_qp_42-Q4.a*
 >
 >**Question**
@@ -292,7 +292,7 @@
 >- on a positive charge
 
 
->[!success] Electric field strength [1]
+>[!success] Electric field strength (1)
 >> *9702_s19_qp_41-Q5.a*
 >
 >**Question**
@@ -313,7 +313,7 @@
 >- and inversely proportional to the square of their separation 
 
 
->[!success] Electric potential [2]
+>[!success] Electric potential (2)
 >> *9702_s24_qp_42-Q5.a*
 >
 >**Question**
@@ -325,7 +325,7 @@
 
 
 # 19. Capacitance
->[!success] Capacitance of parallel plate capacitor [2]
+>[!success] Capacitance of parallel plate capacitor (2)
 >> *9702_w24_qp_42-Q7.a*
 >
 >**Question**
@@ -337,7 +337,7 @@
 
 
 # 20. Magnetic fields
->[!success] Magnetic field [1]
+>[!success] Magnetic field (1)
 >> *9702_m20_qp_42-Q8.a*
 >
 >**Question**
@@ -346,7 +346,7 @@
 >**Mark Scheme**
 >- Region of space where a moving charge experiences a force
 
->[!success] Magnetic flux density [2]
+>[!success] Magnetic flux density (2)
 >> *9702_s25_qp_41-Q7.a*
 >
 >**Question**
@@ -360,7 +360,7 @@
 >2 marks for all 3 points
 
 
->[!success] Tesla [2]
+>[!success] Tesla (2)
 >> *9702_w21_qp_41-Q8.a*
 >
 >**Question**
@@ -371,7 +371,7 @@
 >- where current is perpendicular to magnetic field
 
 
->[!success] Magnetic Flux [2]
+>[!success] Magnetic Flux (2)
 >> *9702_m18_qp_42-Q10.a.i*
 >
 >**Question**
@@ -381,7 +381,7 @@
 >- Product of magnetic flux density and area
 >- where direction of flux is normal to area
 
->[!success] Magnetic flux linkage [2]
+>[!success] Magnetic flux linkage (2)
 >> *9702_m21_qp_42-Q9.a*
 >
 >**Question**
@@ -392,7 +392,7 @@
 >- where area is perpendicular to magnetic field
 
 
->[!success] Faraday's law of electromagnetic induction [2]
+>[!success] Faraday's law of electromagnetic induction (2)
 >> *9702_m25_qp_42-Q7.a*
 >
 >**Question**
@@ -405,7 +405,7 @@
 >Induced e.m.f. not magnitude of induced e.m.f.
 
 
->[!success] Lenz's law of electromagnetic induction [2]
+>[!success] Lenz's law of electromagnetic induction (2)
 >> 9702_w25_qp_44-Q7.a
 >
 >**Question**
@@ -417,7 +417,7 @@
 
 # 21. Alternating currents
 
->[!success] Frequency of an alternating current [1]
+>[!success] Frequency of an alternating current (1)
 >> 9702_w24_qp_42-Q8.a
 >
 >**Question**
@@ -427,7 +427,7 @@
 >- Number of cycles per unit time
 
 
->[!success] Root-mean-square value of an AC voltage [1]
+>[!success] Root-mean-square value of an AC voltage (1)
 >> *9702_w21_qp_41-Q9.a*
 >
 >**Question**
@@ -438,7 +438,7 @@
 >- that dissipates same power as the mean power of the alternating voltage 
 
 
->[!success] Rectification of an alternating voltage [1]
+>[!success] Rectification of an alternating voltage (1)
 >> *9702_w24_qp_41-Q6.a.i*
 >
 >**Question**
@@ -448,7 +448,7 @@
 >- Conversion from AC to DC
 
 
->[!success] Smoothing [1]
+>[!success] Smoothing (1)
 >> *9702_w11_qp_43-Q5.c.i*
 >
 >**Question**
@@ -459,7 +459,7 @@
 
 # 22. Quantum Physics
 
->[!success] Photon [2]
+>[!success] Photon (2)
 >> *9702_w25_qp_41-Q8.a*
 >
 >**Question**
@@ -470,7 +470,7 @@
 >- of electromagnetic radiation 
 
 
->[!success] Photoelectric effect [2]
+>[!success] Photoelectric effect (2)
 >> *9702_s25_qp_42-Q9.a*
 >
 >**Question**
@@ -481,7 +481,7 @@
 >- when electromagnetic radiation is incident on the surface
 
 
->[!success] Threshold frequency [2]
+>[!success] Threshold frequency (2)
 >> *9702_m16_qp_42-Q11.a*
 >
 >**Question**
@@ -491,7 +491,7 @@
 >- **Minimum** frequency of electromagnetic radiation needed
 >- for emission of electrons from a metal surface to occur 
 
->[!success] Work function energy [2]
+>[!success] Work function energy (2)
 >> *9702_w22_qp_41-Q8.a*
 >
 >**Question**
@@ -501,7 +501,7 @@
 >- **Minimum** photon energy
 >- to remove an electron from the surface of a metal
 
->[!success] Wave particle duality [2]
+>[!success] Wave particle duality (2)
 >> *9702_s25_qp_44-Q9.a.i*
 >
 >**Question**
@@ -512,7 +512,7 @@
 >- **moving** particle can behave like a wave 
 
 
->[!success] de Broglie wavelength [1]
+>[!success] de Broglie wavelength (1)
 >> *9702_s25_qp_41-Q8.a*
 >
 >**Question**
@@ -525,7 +525,7 @@
 
 
 # 23. Nuclear physics
->[!success] Mass defect of a nucleus [2]
+>[!success] Mass defect of a nucleus (2)
 >> *9702_w25_qp_42-Q9.a*
 >
 >**Question**
@@ -536,7 +536,7 @@
 >- when nucleons are separated to infinity 
 
 
->[!success] Nuclear binding energy [2]
+>[!success] Nuclear binding energy (2)
 >> *9702_s24_qp_42-Q9.a*
 >
 >**Question**
@@ -547,7 +547,7 @@
 >- to infinity 
 
 
->[!success] Nuclear fusion [2]
+>[!success] Nuclear fusion (2)
 >> *9702_w23_qp_41-Q9.a*
 >
 >**Question**
@@ -557,7 +557,7 @@
 >- Two small nuclei join together 
 >- to form one large nucleus 
 
->[!success] Nuclear fission [2]
+>[!success] Nuclear fission (2)
 >> *9702_w20_qp_42-Q12.a.ii*
 >
 >**Question**
@@ -569,7 +569,7 @@
 
 
 
->[!success] Radioactive decay [3]
+>[!success] Radioactive decay (3)
 >> *9702_w18_qp_41-Q12.a*
 >
 >**Question**
@@ -581,7 +581,7 @@
 >- from an unstable nucleus 
 
 
->[!success] Random nature of radioactive decay [1]
+>[!success] Random nature of radioactive decay (1)
 >> *9702_m25_qp_42-Q9.a*
 >
 >**Question**
@@ -590,7 +590,7 @@
 >**Mark Scheme**
 >- Cannot predict when a particular nucleus will decay
 
->[!success] Spontaneous nature of radioactive decay [1]
+>[!success] Spontaneous nature of radioactive decay (1)
 >> *9702_m25_qp_42-Q9.a*
 >
 >**Question**
@@ -600,7 +600,7 @@
 >- Not affected by external factors
 
 
->[!success] Activity of a radioactive sample [1]
+>[!success] Activity of a radioactive sample (1)
 >> *9702_w25_qp_44-Q8.c.i*
 >
 >**Question**
@@ -612,7 +612,7 @@
 
 
 
->[!success] Decay constant [2]
+>[!success] Decay constant (2)
 >> *9702_m18_qp_42-Q13.a.i*
 >
 >**Question**
@@ -622,7 +622,7 @@
 >- probability of decay of a nucleus 
 >- per unit time
 
->[!success] Half life [1]
+>[!success] Half life (1)
 >> *9702_m25_qp_42-Q9.b*
 >
 >**Question**
@@ -633,7 +633,7 @@
 
 # 24. Medical Physics
 
->[!success] Specific acoustic impedance [2]
+>[!success] Specific acoustic impedance (2)
 >> *9702_s25_qp_44-Q10.b.i*
 >
 >**Question**
@@ -644,7 +644,7 @@
 >- and speed of ultrasound in medium
 
 
->[!success] Attenuation of ultrasound wave [2]
+>[!success] Attenuation of ultrasound wave (2)
 >> 9702_w19_qp_42-Q5.c.i
 >
 >**Question**
@@ -656,7 +656,7 @@
 
 
 
->[!success] Sharpness of an X-ray image [1]
+>[!success] Sharpness of an X-ray image (1)
 >> *9702_w15_qp_41-Q10.a*
 >
 >**Question**
@@ -665,7 +665,7 @@
 >**Mark Scheme**
 >- Clarity of edges of image
 
->[!success] Contrast of an X-ray image [1]
+>[!success] Contrast of an X-ray image (1)
 >> *9702_w15_qp_41-Q10.a*
 >
 >**Question**
@@ -676,7 +676,7 @@
 
 
 
->[!success] Hardness of an X-ray beam [1]
+>[!success] Hardness of an X-ray beam (1)
 >> 9702_m16_qp_42-Q12.a.i
 >
 >**Question**
@@ -688,7 +688,7 @@
 
 
 
->[!success] Tracer [2]
+>[!success] Tracer (2)
 >> *9702_w25_qp_44-Q8.a*
 >
 >**Question**
@@ -700,7 +700,7 @@
 
 
 
->[!success] Annihilation [1]
+>[!success] Annihilation (1)
 >> 9702_m22_qp_42-Q11.b.i
 >
 >**Question**
@@ -710,7 +710,7 @@
 >- A particle interacting with its antiparticle so that the mass is converted into energy 
 
 # 25. Astronomy and cosmology 
->[!success] Luminosity of a star [1]
+>[!success] Luminosity of a star (1)
 >> *9702_m25_qp_42-Q10.a.i*
 >
 >**Question**
@@ -720,7 +720,7 @@
 >- total power of radiation emitted by the star
 
 
->[!success] Standard candle [1]
+>[!success] Standard candle (1)
 >> *9702_m23_qp_42-Q10.b*
 >
 >**Question**
@@ -730,7 +730,7 @@
 >- Object with known luminosity 
 
 
->[!success] Wien's displacement law [2]
+>[!success] Wien's displacement law (2)
 >> *9702_w25_qp_41-Q9.a*
 >
 >**Question**
@@ -746,7 +746,7 @@
 
 
 
->[!success] Redshift [2]
+>[!success] Redshift (2)
 >> 9702_w25_qp_44-Q10.a
 >
 >**Question**
@@ -757,7 +757,7 @@
 >- increase in **observed** wavelength 
 
 
->[!success] Hubble's Law [2]
+>[!success] Hubble's Law (2)
 >> *9702_s25_qp_41-Q10.a*
 >
 >**Question**
@@ -769,68 +769,4 @@
 >- and distance is the distance of the galaxy from the observer
 >
 >2 marks for 3 points
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
