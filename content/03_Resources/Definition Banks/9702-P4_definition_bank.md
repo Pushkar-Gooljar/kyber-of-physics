@@ -138,9 +138,21 @@
 >
 >^centripetal-acceleration
 
+>[!success] Circular Motion
+>> *9702_w25_qp_41-Q1*
+>
+>**Question**
+>- In terms of velocity and acceleration, describe uniform circular motion of an object.
+>
+>**Mark Scheme**
+>- Velocity and acceleration both have constant magnitude
+>- Acceleration is always towards centre of circular path
+>- Velocity is always perpendicular to acceleration
+
 
 # 13. Gravitational Fields
 
+## Field of Force
 >[!success] Field of Force (2)
 >> *9702_w17_qp_42-Q9.a*
 >
