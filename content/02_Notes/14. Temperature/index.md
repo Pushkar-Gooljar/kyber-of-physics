@@ -1,5 +1,7 @@
-# 14. Temperature
-
+---
+title: 14. Temperature
+hideFolderContent: "true"
+---
 ## Syllabus
 >[!abstract]- Syllabus Content
 > #### 14.1 Thermal equilibrium
