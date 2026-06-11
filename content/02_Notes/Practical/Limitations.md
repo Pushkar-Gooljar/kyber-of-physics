@@ -1,9 +1,6 @@
-Here is a comprehensive, highly-structured Markdown toolkit designed specifically for high-achieving students preparing for Cambridge International A-Level Physics (9702) Paper 3, Question 2. 
-
-It is formatted perfectly for Obsidian (`.md`), utilizing headers, tables, and callout-style insights.
-
-***
-
+---
+title: "Paper 3: Limitations"
+---
 # 🛠️ 9702 Physics Paper 3: Q2 Evaluation Toolkit
 
 ## 🧠 Examiner's Insight: The Anatomy of Question 2
