@@ -8,7 +8,7 @@ These notes are formatted perfectly for Obsidian MD, utilising your custom `[!co
 
 ## 16.1 Internal Energy
 
-Thermodynamics is fundamentally the study of energy transfers within a system. To understand this, we must first define the energy contained *within* the matter itself.
+Thermodynamics is fundamentally  study of energy transfers within a system. To understand this, we must first define the energy contained *within* the matter itself.
 
 > [!cite] Definition: Internal Energy ($U$)
 > The internal energy of a system is defined as the **sum of a random distribution of kinetic and potential energies** associated with the molecules of a system.
