@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrostatic Field Inside a Hollow Sphere</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --blue-sector: #3b82f6;
+            --red-sector: #ef4444;
+            --electron-color: #0ea5e9;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            width: 95%;
+            padding: 2rem;
+        }
+
+        @media (min-width: 900px) {
+            .container {
+                grid-template-columns: 600px 1fr;
+            }
+        }
+
+        /* Card styles */
+        .panel {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .canvas-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+            touch-action: none; /* Prevents scrolling when dragging on mobile */
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Dashboard controls and stats */
+        .controls {
+            margin-bottom: 1.5rem;
+        }
+
+        .slider-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .slider-group label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            accent-color: var(--electron-color);
+        }
+
+        .metrics {
+            border-top: 1px solid #334155;
+            padding-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .metric-card {
+            background-color: #0f172a;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .metric-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .color-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .blue-dot { background-color: var(--blue-sector); }
+        .red-dot { background-color: var(--red-sector); }
+
+        .bar-container {
+            display: grid;
+            grid-template-columns: 80px 1fr 60px;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .bar-label {
+            color: var(--text-muted);
+        }
+
+        .bar-bg {
+            background-color: #334155;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.05s linear;
+        }
+
+        .blue-fill { background-color: var(--blue-sector); }
+        .red-fill { background-color: var(--red-sector); }
+
+        .bar-val {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+            font-weight: 600;
+        }
+
+        .btn {
+            background-color: #334155;
+            color: var(--text-main);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+            align-self: flex-start;
+        }
+
+        .btn:hover {
+            background-color: #475569;
+        }
+
+        /* Interactive handles */
+        .draggable {
+            cursor: grab;
+        }
+        .draggable:active {
+            cursor: grabbing;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Left Panel: Interactive Simulation -->
+    <div class="panel">
+        <div class="canvas-container">
+            <svg id="simCanvas" viewBox="0 0 600 600">
+                <!-- Outer Sphere Shell Background Grid -->
+                <circle cx="300" cy="300" r="250" fill="#0b1329" stroke="#334155" stroke-width="2" />
+                
+                <!-- Colored Arcs (Dynamically updated) -->
+                <path id="arc0" fill="none" stroke="var(--blue-sector)" stroke-width="12" stroke-linecap="round" />
+                <path id="arc1" fill="none" stroke="var(--red-sector)" stroke-width="12" stroke-linecap="round" />
+                <path id="arc2" fill="none" stroke="var(--blue-sector)" stroke-width="12" stroke-linecap="round" />
+                <path id="arc3" fill="none" stroke="var(--red-sector)" stroke-width="12" stroke-linecap="round" />
+
+                <!-- Projection/Dividing Lines -->
+                <line id="line1" stroke="#64748b" stroke-width="1.5" stroke-dasharray="6,4" />
+                <line id="line2" stroke="#64748b" stroke-width="1.5" stroke-dasharray="6,4" />
+
+                <!-- Force Vectors -->
+                <g id="forceVectors"></g>
+
+                <!-- Electron draggable node -->
+                <g id="electron" class="draggable">
+                    <!-- Outer glow/interaction area -->
+                    <circle cx="0" cy="0" r="35" fill="rgba(14, 165, 233, 0.15)" />
+                    <!-- Main Body -->
+                    <circle cx="0" cy="0" r="18" fill="var(--electron-color)" stroke="#fff" stroke-width="2" />
+                    <!-- Crosshair representing the division point -->
+                    <circle cx="0" cy="0" r="6" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" />
+                    <line x1="-18" y1="0" x2="18" y2="0" stroke="rgba(255,255,255,0.4)" stroke-width="1" />
+                    <line x1="0" y1="-18" x2="0" y2="18" stroke="rgba(255,255,255,0.4)" stroke-width="1" />
+                    <!-- Minus Sign -->
+                    <text x="0" y="4" fill="#fff" font-size="14" font-weight="bold" text-anchor="middle" pointer-events="none">-</text>
+                </g>
+            </svg>
+        </div>
+        <button class="btn" id="resetBtn">Reset Electron to Center</button>
+    </div>
+
+    <!-- Right Panel: Controls & Information -->
+    <div class="panel">
+        <div>
+            <h1>Inverse-Square Cancellation</h1>
+            <p>
+                Drag the electron inside the sphere. The intersecting dashed lines project opposing sectors on the sphere's surface. 
+                Notice how the <strong>closer</strong> sector shrinks in size, while the <strong>farther</strong> sector expands to cover a much larger area.
+            </p>
+
+            <div class="controls">
+                <div class="slider-group">
+                    <label for="angleSlider">
+                        <span>Cone Sector Angle (Width)</span>
+                        <span id="angleVal">60°</span>
+                    </label>
+                    <input type="range" id="angleSlider" min="20" max="120" value="60">
+                </div>
+            </div>
+
+            <div class="metrics">
+                <!-- Blue Sector Metrics -->
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span class="color-dot blue-dot"></span>
+                        <span>Opposing Blue Sectors</span>
+                    </div>
+                    <div class="bar-container">
+                        <span class="bar-label">Near Sector</span>
+                        <div class="bar-bg"><div id="blueNearBar" class="bar-fill blue-fill" style="width: 50%;"></div></div>
+                        <span class="bar-val" id="blueNearText">1.00 N</span>
+                    </div>
+                    <div class="bar-container">
+                        <span class="bar-label">Far Sector</span>
+                        <div class="bar-bg"><div id="blueFarBar" class="bar-fill blue-fill" style="width: 50%;"></div></div>
+                        <span class="bar-val" id="blueFarText">1.00 N</span>
+                    </div>
+                </div>
+
+                <!-- Red Sector Metrics -->
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span class="color-dot red-dot"></span>
+                        <span>Opposing Red Sectors</span>
+                    </div>
+                    <div class="bar-container">
+                        <span class="bar-label">Near Sector</span>
+                        <div class="bar-bg"><div id="redNearBar" class="bar-fill red-fill" style="width: 50%;"></div></div>
+                        <span class="bar-val" id="redNearText">1.00 N</span>
+                    </div>
+                    <div class="bar-container">
+                        <span class="bar-label">Far Sector</span>
+                        <div class="bar-bg"><div id="redFarBar" class="bar-fill red-fill" style="width: 50%;"></div></div>
+                        <span class="bar-val" id="redFarText">1.00 N</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p style="margin-top: 1.5rem; margin-bottom: 0; font-size: 0.85rem;">
+            *Calculated using 3D spherical projections. The charge on each sector grows exactly with the square of its distance ($q \propto r^2$), leaving the net force from opposing sectors perfectly equal.
+        </p>
+    </div>
+</div>
+
+<script>
+    const canvas = document.getElementById('simCanvas');
+    const electron = document.getElementById('electron');
+    const angleSlider = document.getElementById('angleSlider');
+    const angleVal = document.getElementById('angleVal');
+    const resetBtn = document.getElementById('resetBtn');
+
+    // Sphere attributes
+    const cx = 300;
+    const cy = 300;
+    const R = 250;
+
+    // Electron state (coordinates relative to canvas coordinates)
+    let ex = 400; // start slightly offset to show the effect immediately
+    let ey = 330;
+    const electronRadius = 18;
+
+    // Line configurations
+    let angleDiff = (60 * Math.PI) / 180; // default 60 deg
+    let baseAngle = (45 * Math.PI) / 180; // tilt angle of the reference framework
+
+    // Drag and drop mechanics
+    let isDragging = false;
+
+    electron.addEventListener('pointerdown', (e) => {
+        isDragging = true;
+        electron.setPointerCapture(e.pointerId);
+    });
+
+    electron.addEventListener('pointermove', (e) => {
+        if (!isDragging) return;
+        
+        // Get mouse position relative to SVG
+        const rect = canvas.getBoundingClientRect();
+        const mouseX = ((e.clientX - rect.left) / rect.width) * 600;
+        const mouseY = ((e.clientY - rect.top) / rect.height) * 600;
+
+        // Calculate distance from center of sphere
+        const dx = mouseX - cx;
+        const dy = mouseY - cy;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        // Constrain electron to stay inside the sphere with buffer
+        const maxDist = R - electronRadius - 10;
+        if (dist < maxDist) {
+            ex = mouseX;
+            ey = mouseY;
+        } else {
+            const angle = Math.atan2(dy, dx);
+            ex = cx + maxDist * Math.cos(angle);
+            ey = cy + maxDist * Math.sin(angle);
+        }
+
+        update();
+    });
+
+    electron.addEventListener('pointerup', (e) => {
+        isDragging = false;
+    });
+
+    angleSlider.addEventListener('input', (e) => {
+        const deg = e.target.value;
+        angleVal.textContent = deg + '°';
+        angleDiff = (deg * Math.PI) / 180;
+        update();
+    });
+
+    resetBtn.addEventListener('click', () => {
+        ex = cx;
+        ey = cy;
+        update();
+    });
+
+    // Solve intersection of line from electron at angle `theta` with circle of radius R at (cx, cy)
+    function getCircleIntersections(theta) {
+        const cos = Math.cos(theta);
+        const sin = Math.sin(theta);
+
+        // Vector from circle center to electron
+        const ux = ex - cx;
+        const uy = ey - cy;
+
+        // Quadratic coefficients for parameter t: t^2 + 2(u.v)t + (u^2 - R^2) = 0
+        const b = 2 * (ux * cos + uy * sin);
+        const c = (ux * ux + uy * uy) - R * R;
+        const disc = b * b - 4 * c;
+
+        if (disc < 0) return []; // Should not happen if electron is inside
+
+        const sqrtD = Math.sqrt(disc);
+        const t1 = (-b + sqrtD) / 2;
+        const t2 = (-b - sqrtD) / 2;
+
+        return [
+            { x: ex + t1 * cos, y: ey + t1 * sin, t: t1 },
+            { x: ex + t2 * cos, y: ey + t2 * sin, t: t2 }
+        ];
+    }
+
+    function polarToCartesian(centerX, centerY, radius, angleInRadians) {
+        return {
+            x: centerX + (radius * Math.cos(angleInRadians)),
+            y: centerY + (radius * Math.sin(angleInRadians))
+        };
+    }
+
+    function describeArc(centerX, centerY, radius, startAngle, endAngle) {
+        let start = polarToCartesian(centerX, centerY, radius, startAngle);
+        let end = polarToCartesian(centerX, centerY, radius, endAngle);
+
+        let diff = endAngle - startAngle;
+        while (diff < 0) diff += 2 * Math.PI;
+
+        let largeArcFlag = diff <= Math.PI ? "0" : "1";
+
+        return [
+            "M", start.x, start.y,
+            "A", radius, radius, 0, largeArcFlag, 1, end.x, end.y
+        ].join(" ");
+    }
+
+    function drawArrow(svgContainer, x1, y1, x2, y2, color, strokeWidth = 3) {
+        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("x1", x1);
+        line.setAttribute("y1", y1);
+        line.setAttribute("x2", x2);
+        line.setAttribute("y2", y2);
+        line.setAttribute("stroke", color);
+        line.setAttribute("stroke-width", strokeWidth);
+        line.setAttribute("stroke-linecap", "round");
+        svgContainer.appendChild(line);
+
+        // Arrow head coordinates
+        const angle = Math.atan2(y2 - y1, x2 - x1);
+        const headLength = 10;
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        const xHead1 = x2 - headLength * Math.cos(angle - Math.PI / 6);
+        const yHead1 = y2 - headLength * Math.sin(angle - Math.PI / 6);
+        const xHead2 = x2 - headLength * Math.cos(angle + Math.PI / 6);
+        const yHead2 = y2 - headLength * Math.sin(angle + Math.PI / 6);
+
+        path.setAttribute("d", `M ${x2} ${y2} L ${xHead1} ${yHead1} L ${xHead2} ${yHead2} Z`);
+        path.setAttribute("fill", color);
+        svgContainer.appendChild(path);
+    }
+
+    function update() {
+        // Move electron visual group
+        electron.setAttribute('transform', `translate(${ex}, ${ey})`);
+
+        // Compute intersecting chords at specified angles
+        const theta1 = baseAngle;
+        const theta2 = baseAngle + angleDiff;
+
+        const pts1 = getCircleIntersections(theta1);
+        const pts2 = getCircleIntersections(theta2);
+
+        if (pts1.length < 2 || pts2.length < 2) return;
+
+        // Draw chords
+        const line1 = document.getElementById('line1');
+        line1.setAttribute('x1', pts1[0].x);
+        line1.setAttribute('y1', pts1[0].y);
+        line1.setAttribute('x2', pts1[1].x);
+        line1.setAttribute('y2', pts1[1].y);
+
+        const line2 = document.getElementById('line2');
+        line2.setAttribute('x1', pts2[0].x);
+        line2.setAttribute('y1', pts2[0].y);
+        line2.setAttribute('x2', pts2[1].x);
+        line2.setAttribute('y2', pts2[1].y);
+
+        // Classify and sort boundary intersection points to construct the 4 arcs
+        const angles = [
+            Math.atan2(pts1[0].y - cy, pts1[0].x - cx),
+            Math.atan2(pts1[1].y - cy, pts1[1].x - cx),
+            Math.atan2(pts2[0].y - cy, pts2[0].x - cx),
+            Math.atan2(pts2[1].y - cy, pts2[1].x - cx)
+        ].map(a => a < 0 ? a + 2 * Math.PI : a);
+
+        angles.sort((a, b) => a - b);
+
+        // Formulate 4 arcs
+        const arcSpecs = [
+            { start: angles[0], end: angles[1] },
+            { start: angles[1], end: angles[2] },
+            { start: angles[2], end: angles[3] },
+            { start: angles[3], end: angles[0] + 2 * Math.PI }
+        ];
+
+        // Assign colors dynamically to mirror original hand-drawn image
+        // Opposing sectors share identical color patterns
+        const colors = [
+            'var(--blue-sector)', // Sector 0 (Blue)
+            'var(--red-sector)',  // Sector 1 (Red)
+            'var(--blue-sector)', // Sector 2 (Blue)
+            'var(--red-sector)'   // Sector 3 (Red)
+        ];
+
+        for (let i = 0; i < 4; i++) {
+            const spec = arcSpecs[i];
+            const path = document.getElementById(`arc${i}`);
+            path.setAttribute('d', describeArc(cx, cy, R, spec.start, spec.end));
+            path.setAttribute('stroke', colors[i]);
+        }
+
+        // Calculate and display physical values
+        const vectorContainer = document.getElementById('forceVectors');
+        vectorContainer.innerHTML = ''; // Clear previous frame forces
+
+        // Helper calculations for distance and dynamic values
+        function getSectorProperties(index) {
+            const spec = arcSpecs[index];
+            const midAngle = (spec.start + spec.end) / 2;
+            const targetPoint = polarToCartesian(cx, cy, R, midAngle);
+            const dist = Math.sqrt((ex - targetPoint.x) ** 2 + (ey - targetPoint.y) ** 2);
+            const angularWidth = spec.end - spec.start;
+
+            // In 3D: Area (Charge) scales exactly with r^2
+            // Since F = q / r^2, Force scales directly with angular width (or solid angle)
+            const force = angularWidth * 1.5; // Scale constant for UI aesthetics
+            const chargeVal = (dist ** 2) * angularWidth * 0.005;
+
+            return { dist, force, chargeVal, midAngle };
+        }
+
+        const secProperties = [
+            getSectorProperties(0),
+            getSectorProperties(1),
+            getSectorProperties(2),
+            getSectorProperties(3)
+        ];
+
+        // Draw Force Arrows
+        secProperties.forEach((sec, idx) => {
+            // Draw attractive vector arrow pointing towards the midpoint of each sector arc
+            const dx = Math.cos(sec.midAngle);
+            const dy = Math.sin(sec.midAngle);
+            
+            // Scaled length of force vector
+            const forceLength = sec.force * 40; 
+            const endX = ex + dx * forceLength;
+            const endY = ey + dy * forceLength;
+
+            drawArrow(vectorContainer, ex, ey, endX, endY, colors[idx], 2.5);
+        });
+
+        // Determine which sector of the opposite pairs is near vs far
+        const bluePair = [secProperties[0], secProperties[2]].sort((a, b) => a.dist - b.dist);
+        const redPair = [secProperties[1], secProperties[3]].sort((a, b) => a.dist - b.dist);
+
+        // Update UI Panel elements dynamically
+        // Blue Sectors UI
+        document.getElementById('blueNearText').textContent = bluePair[0].force.toFixed(2) + " N";
+        document.getElementById('blueFarText').textContent = bluePair[1].force.toFixed(2) + " N";
+        document.getElementById('blueNearBar').style.width = `${(bluePair[0].force / 5) * 100}%`;
+        document.getElementById('blueFarBar').style.width = `${(bluePair[1].force / 5) * 100}%`;
+
+        // Red Sectors UI
+        document.getElementById('redNearText').textContent = redPair[0].force.toFixed(2) + " N";
+        document.getElementById('redFarText').textContent = redPair[1].force.toFixed(2) + " N";
+        document.getElementById('redNearBar').style.width = `${(redPair[0].force / 5) * 100}%`;
+        document.getElementById('redFarBar').style.width = `${(redPair[1].force / 5) * 100}%`;
+    }
+
+    // Initialize state on start
+    update();
+</script>
+</body>
+</html>

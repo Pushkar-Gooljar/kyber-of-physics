@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"a9ffe48144edb894","type":"text","text":"Electrons emit photons when transitioning between energy levels","x":140,"y":-160,"width":326,"height":93},
+		{"id":"71893ae12bbca69a","type":"text","text":"Photon energy is equal to difference between energy levels ($\\Delta E=hf$)","x":500,"y":-160,"width":326,"height":93},
+		{"id":"541bdab07434fc37","type":"text","text":"Photon energy is related to frequency","x":860,"y":-160,"width":326,"height":93},
+		{"id":"5cbe111220068d0f","type":"text","text":"Discrete frequencies on spectrum mean that photon energies are discrete.","x":860,"y":-20,"width":326,"height":93},
+		{"id":"cc787cab9393fdd2","type":"text","text":"electrons emit photons when transitioning between energy levels. photon energy is equal to difference in energy of energy levels. photon energy is related to frequency. since spectrum has discrete frequencies, photon energies must be discrete. therefore, difference in electron energy levels and the energy levels themselves must be discret.","x":500,"y":-20,"width":326,"height":93},
+		{"id":"45cf1c6e515c03c6","type":"text","text":"Therefore electron energy levels must be discrete.","x":140,"y":-20,"width":326,"height":93}
+	],
+	"edges":[
+		{"id":"056112d3f0904fe5","fromNode":"a9ffe48144edb894","fromSide":"right","toNode":"71893ae12bbca69a","toSide":"left"},
+		{"id":"d3aa640a11f8e8a7","fromNode":"71893ae12bbca69a","fromSide":"right","toNode":"541bdab07434fc37","toSide":"left"},
+		{"id":"ca1f2f0a65c53234","fromNode":"541bdab07434fc37","fromSide":"bottom","toNode":"5cbe111220068d0f","toSide":"top"},
+		{"id":"888145d48f7897d6","fromNode":"5cbe111220068d0f","fromSide":"left","toNode":"cc787cab9393fdd2","toSide":"right"},
+		{"id":"e9a024fd6331801c","fromNode":"cc787cab9393fdd2","fromSide":"left","toNode":"45cf1c6e515c03c6","toSide":"right"}
+	]
+}

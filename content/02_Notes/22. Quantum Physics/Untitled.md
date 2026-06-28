@@ -1,0 +1,307 @@
+Here is your markdown, perfectly reordered to reflect the structure of the Cambridge A Level Physics 9702 (2025-2027) syllabus for Chapter 22: Quantum Physics. I have grouped them under the corresponding syllabus sub-headings to make your Obsidian notes well-organized. 
+
+No content has been changed.
+
+***
+
+## 22.1 Energy and momentum of a photon
+
+# (W25 41 8.a)
+State what is meant by a photon
+A quantum of energy of electromagnetic radiation
+
+# (M25 42 8)
+![‎|500](photonic-force.svg)
+
+- A laser emits monochromatic red light. The light is produced when electrons move from a higher energy level to a lower energy level. The difference in energy between the two levels is $1.96\text{ eV}$.
+- The power of the beam emitted by the laser is $1.0\times 10^{-2}\text{ W}$.
+- The photons are incident normally on the surface. Half of the number of photons are absorbed by the surface, and half are reflected.
+Determine the average force exerted by the beam of photons on the surface (5 marks)
+
+1. **Number of photons incident on surface per unit time ($n$)**
+$$
+\text{Number per unit time (n)}=\frac{\text{power}}{\text{energy per photon}}
+$$
+$$
+n=\frac{{1.0 \times 10^{-2}}}{1.96 \times 1.6 \times 10^{-19}}
+$$
+$$
+n=3.1888 \times 10^{16}
+$$
+2. **Initial momentum of photons**
+$$
+E=pc
+$$
+$$
+p=\frac{E}{c}
+$$
+$$
+p=\frac{{1.96 \times 1.6 \times 10^{-19}}}{3.00 \times 10^8}
+$$
+$$
+p=1.0453 \times 10^{-27}
+$$
+3. **Change of momentum for absorbed photons**
+	- Initial momentum ($p_{i}$) : $p$
+	- Final momentum ($p_{f}$): $0$ (they are absorbed)
+	- Change in momentum ($\Delta p$):
+$$
+\Delta p=p-0
+$$
+$$
+\Delta p=p
+$$
+4. **Change of momentum for reflected photons**
+	- Initial momentum ($p_{i}$) : $p$
+	- Final momentum ($p_{f}$): $-p$ (reflected in opposite direction)
+	- Change in momentum ($\Delta p$):
+$$
+\Delta p=p-(-p)
+$$
+$$
+\Delta p=2p
+$$
+5. **Average momentum change per incident photon**
+$$
+\Delta p_{\text{average}} = \frac{{p+2p}}{2}=1.5p
+$$
+6. **Average force**
+
+$$
+\begin{align}
+F_{\text{average}}&=\text{Average rate of change of momentum} \\
+&= \text{Number of photons per second} \times \text{average change in momentum} \\
+&= n \times 1.5p \\
+&=1.5pn
+\end{align}
+$$
+7. **Final calculation**
+
+$$
+\begin{align}
+F&=1.5pn \\
+&=1.5 \times 1.0453 \times 10^{-27} \times 3.1888 \times 10^{16} \\
+&= 4.9999 \times 10^{-11} \\
+&= 5.0 \times 10^{-11}\text{ N}
+\end{align}
+$$
+
+# (W23 41 8)
+![[18.1-4.png]]
+
+The beam of red light in (b) is now replaced with a beam of blue light of the same intensity. Suggest and explain whether the pressure exerted on the mirror by the beam of blue light is less than, the same as, or greater than the pressure exerted by the beam of red light.
+- Blue light has a shorter wavelength than red light therefore the photons have greater momentum.
+- However, since intensity (and hence power) is constant, number of photons per unit time will be smaller. 
+- Therefore pressure will be the same.
+
+# (N20 41 11)
+A photon of wavelength 540 nm collides with an isolated stationary electron.
+Explain why it is not possible for the deflected photon to have a wavelength of less than 540 nm.
+
+Smaller wavelength corresponds to higher photon energy. The photon loses energy in collision therefore this is not possible.
+
+# (S15 42 6)
+![[18.1-8.png]]
+Explain why the magnitude of the final momentum of the electron is not equal to the change in magnitude of the momentum of the photon.
+
+Momentum is a vector quantity. Since the photon changes direction during the collision, momentum must be resolved in two dimensions rather than subtracting magnitudes.
+
+
+## 22.2 Photoelectric effect
+
+# (W25 44 9.a)
+State what is meant by the photoelectric effect.
+The emission of electrons from a metal surface when electromagnetic radiation radiation is incident on the surface
+
+# (W22 41 8)
+state what is meant by work function of a metal
+- minimum photon energy to remove an electron from the surface
+
+# (M24 42 7)
+Explain the term threshold wavelength
+- maximum wavelength of electromagnetic radiation that causes electrons to be emitted from the surface of a metal.
+
+# (W23 42 8) *
+When the surface of a metal plate is illuminated with electromagnetic radiation, electrons are sometimes emitted from the metal.
+It is observed that this phenomenon occurs only when the frequency of the electromagnetic radiation is greater than a certain minimum value, regardless of the intensity of the radiation. Explain how this observation provides evidence for the existence of photons.
+
+Electron needs a minimum energy to escape. Instead of accumulating energy continuously, an electron absorbs a single whole packet. A packet's energy depends on frequency ($E=hf$), not intensity, explaining why a minimum frequency is required. Intensity relates to the number of packets not to energy in packet.
+
+# (W21 42 9)
+A polished calcium plate in a vacuum is investigate by illuminating the surface with light. It is found that no photoelectric current is produced when the frequency of the light is less than $6.93 \times 10^{14}\text{ Hz}$.
+Explain how the photon model of electromagnetic radiation accounts for this phenomenon.
+
+Electron needs a minimum energy to escape. Under the photon model, electromagnetic radiation consists of discrete packets. The energy of a packet is directly proportional to frequency of electromagnetic radiation. An electron absorbs a single whole packet.
+
+# (S21 41 12)
+Explain why the maximum kinetic energy of an emitted electron is independent of the intensity of the incident radiation
+
+Maximum kinetic energy of a photoelectron depends on the energy of an absorbed photon. The energy of an individual photon is directly proportional to frequency of EM radiation but independent of intensity (E=hf). Intensity relates to the number of photons incident per unit time.
+
+# (W22 41 8.c)
+The frequency of radiation incident on the surface of a metal is increased while the power remains constant. 
+State and explain the effect of this change on:
+1. the maximum kinetic energy of photoelectrons
+	- Maximum kinetic energy increases. 
+	- Photon energy increases and work function stays the same.
+2. the rate of emission of photoelectrons
+	- Since power remains constant and photon energy increases, there are fewer photons per unit time.
+	- Since each electron absorbs exactly one photon, fewer photons result in lower rate of electron emission.
+
+>[!tip]
+>$$\text{Power}=\text{Number of photons per unit time} \times hf$$
+
+# (S25 42 9)
+![[18.1-2.png]]
+$V_{s}$ is the voltmeter reading at which the current just falls to zero.
+Explain with reference to photons, why $V_{s}$ depends on the frequency of the incident electromagnetic radiation.
+- The current falls to zero when the potential difference $V_{s}$ equals the maximum kinetic energy per unit charge of the emitted electrons. ($E_{k_{max}}=eV_{s}$)
+- The maximum kinetic energy of an emitted electron depends on the energy of the absorbed photon.
+- The energy of an incident photon is directly proportional to  frequency of the radiation ($E=hf$)
+
+explanation:
+
+- In order for the current to be zero, no photoelectrons must be able to cross the gap between **plate Y** and **plate X** to complete the circuit.
+- In order to ensure that no electrons reach **plate X**, all of them must be stopped, including the ones with maximum kinetic energy ($E_{k_{max}}$).
+- The electric field between the two plates does work against the motion of the electrons to stop them.
+- To just stop all the electrons, the electric field must do work that is equal to $E_{k_{max}}$.
+- Since $V=\frac{W}{Q}$, $V_{s}=\frac{E_{k_{max}}}{e}$, $E_{k_{max}=eV_{s}}$
+- Therefore, the stopping potential $Vs$ must be equal to the maximum kinetic energy per unit charge of the electron.
+- Maximum kinetic energy depends on energy of absorbed photon.
+- Energy of an absorbed photon is directly proportional to frequency of electromagnetic radiation.
+- Therefore, $V_{s}$ depends on the frequency of incident electromagnetic radiation.
+
+# (S22 41 7)
+![[18.1-7.png]]
+
+Conclusions that can be drawn from an $E_{k_{max}}$ against frequency graph:
+1. There is a threshold frequency below which no electrons are emitted. ($f_{0}=x-\text{intercept}$)
+2. Work function of metal = $-(y-\text{intercept})$
+3. Gradient of the line is the Planck constant (calculate and give value)
+4. $E_{k_{max}}$ increases linearly with increasing frequency
+
+**Do not say both $f_{0}$ and $\lambda_{0}$ as it may be treated as the same point in some mark schemes**
+
+State with a reason, how the graph obtained would compare with Fig 7.1 when:
+1. A different metal is used, but keeping the intensity $I$ of the radiation the same
+	- Work function would be different
+	- Graph would have the same gradient (since gradient = Planck constant) but would have different $x$ and $y$ intercepts. (x-intercept=threshold frequency, y-intercept=-work function)
+2. The same metal is used, but with electromagnetic radiation of intensity $2I$
+	- Energy of photons depends on frequency not intensity
+	- Intensity simply relates to the number of photons
+	- Graph would be unchanged.
+
+# (W19 41 11)
+Explain why most electrons will have kinetic energy less than $E_{k_{max}}$
+Some energy is required to bring electrons to the surface
+
+
+## 22.3 Wave-particle duality
+
+# (S22 42 8)
+State one piece of experimental evidence for:
+1. the particulate nature of electromagnetic radiation: photoelectric effect
+2. the wave nature of matter: electron diffraction
+
+Suggest an explanation for why people are not observed to diffract when they walk through a doorway.
+- The de Broglie wavelength of a walking person is negligible compared to the the width of a doorway.
+
+**Explanation:**
+diffraction only occurs if the wavelength is of a similar order of magnitude to, or larger than the width of the gap.
+- if $\lambda \approx d$, diffraction occurs
+- if $\lambda \ll d$, the wave passes through with negligible spreading
+
+de Broglie wavelength of a person.
+$$
+\lambda=\frac{h}{p}=\frac{h}{mv}
+$$
+For the average walking person:
+- $m=70\text{ kg}$
+- $v=1.0\text{ ms}^{-1}$
+$$
+\lambda=\frac{{6.63\times 10^{-34}}}{70 \times 1} = 9.5 \times 10^{-36}\text{ m}
+$$
+Typical width of a doorway is $1.0\text{ m}$
+Since $\lambda \ll d$, no diffraction occurs
+
+# (S25 41 8)
+State what is meant by the de Broglie wavelength
+- Wavelength associated with a moving particle
+
+# (W24 42 9)
+![[18.1-3.png]]
+Explain what this observation shows about the nature of electrons.
+- Diffraction is characteristic of wave behaviour so the observation shows that electrons can behave like waves.
+
+# (S25 44 9.a.i)
+An electromagnetic wave can behave like a particle
+a moving particle can behave like a wave
+
+de broglie wavelength = h/p
+h: planck constant
+
+![[18.1.png]]
+The following pattern is formed on the screen:
+![[18.1-1.png]]
+
+Explain why the pattern provides experimental evidence to indicate a wave nature of electrons.
+- Concentric ring pattern with areas of constructive and destructive interference is similar to the diffraction pattern observed with light.
+- Diffraction and interference are unique characteristics of wave behaviour.
+
+The speed of the electrons is increased.
+Suggest, with a reason how this change affects the pattern observed on the screen.
+- de Broglie wavelength decreases ($\lambda = \frac{h}{mv}$).
+- rings become closer together ($n\lambda =d\sin \theta$)
+
+
+## 22.4 Energy levels in atoms and line spectra
+
+# (W25 42 8.a)
+Use the photon model of electromagnetic radiation to explain how the existence of spectral lines in the emission spectrum provides evidence for discrete electron energy levels in the hydrogen atom.
+
+Electrons transitioning between energy levels emit a single photon with energy equal to the difference between the energy levels. Since photon energy depends on frequency, discrete frequencies in the spectrum mean photon energies are discrete. Therefore the difference between electron energy levels, and the energy levels themselves, must be discrete. (50 words)
+
+![](discrete-energy-levels.svg)
+
+# (M23 42 7)
+A beam of white light passes through a cloud of cool hydrogen gas. the spectrum of the transmitted light is viewed and contains a number of dark lines. explain why these dark lines occur.
+
+- A single photon is absorbed by an electron in the gas and the electron is excited.
+- An electron will only absorb a photon if the photon energy is equal to the difference between two energy levels.
+- Because photon energy corresponds to a specific wavelength, only discrete wavelengths are absorbed.
+- The excited electron de-excites and emits a photon in a random direction.
+- This scatters specific wavelengths away from the transmitted beam, making them appear as dark lines.
+
+# (S23 42 8)
+![[18.1-6.png]]
+Explain, with reference to photons, why there is a single frequency of electromagnetic radiation that corresponds to each of these transitions
+
+ - transition of an electron to a lower energy level emits a single photon with energy equal tot he difference between the two energy levels.
+ - Frequency of radiation corresponds to the photon energy.
+
+# (W18 42 11)
+![[Pasted image 20260616153911.png]]
+
+$$
+\text{Number of Wavelengths}=\frac{{N(N-1)}}{2}
+$$
+Where $N$ is the number of levels including the starting level.
+In this case $N=4$, therefore 
+$$
+\text{number}=\frac{{4(4-1)}}{2}=6
+$$
+
+
+## catching points:
+change in momentum when reflects (x2)
+
+changing frequency or something but keeping power/intensity constant
+
+power = number of photons per unit time x hf
+if power const
+num photons inversely propto hf
+if you increase energy, num decreases and vice versa.
+
+when justifying why negligible say **much less**
+
+## Number wavelengths emmited
