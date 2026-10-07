@@ -1,7 +1,3 @@
-My mistake—I condensed that block instead of keeping your exact text. Here is the full note with your complete original **"Summary for Exam Planning"** section restored word-for-word, alongside all the new calibrations and warnings.
-
----
-
 # Graph Scale Selection & The Danger Zone
 
 ## 1. Definitions
@@ -128,3 +124,9 @@ Once your extreme points guarantee safe ranges for both axes, fill in your 4 to 
 > [!WARNING]
 > ### 3. Re-Check the New $R_x$
 > After calculating $R_{x,\text{new}}$, quickly verify that its own leading digits haven't landed between $1.6$ and $2.0$.
+
+
+>[!danger]
+>Do not start or end your x-axis with your min and max values e.g. if you need to plat values from 6.5, ...., 45.6 do not start your graph with 6.5. start it with a multiple of $s$ like 5 in that case
+
+
